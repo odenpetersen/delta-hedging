@@ -1,1 +1,1 @@
-# delta-hedging
+# Delta Hedging
