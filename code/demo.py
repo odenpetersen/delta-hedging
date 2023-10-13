@@ -37,9 +37,18 @@ delta = sp.stats.norm.cdf(d1[:,:int(T/dt)-1])
 portfolio = np.cumsum(delta * dS,axis=1)
 
 #Stock price
-plt.plot(times,S.T);plt.show()
+plt.plot(times,S.T);
+plt.xlabel('Time')
+plt.ylabel('Stock Price')
+plt.savefig('../output/stock_price.png')
 #Replicating portfolio value
-plt.plot(times[:-1],portfolio.T);plt.show()
+plt.plot(times[:-1],portfolio.T)
+plt.xlabel('Time')
+plt.ylabel('Value of Replicating Portfolio')
+plt.savefig('../output/replicating_portfolio.png')
 #Payoff diagram
-plt.scatter(S[:,-1],portfolio[:,-1]);plt.show()
+plt.scatter(S[:,-1],portfolio[:,-1])
+plt.xlabel('Terminal Stock Price')
+plt.ylabel('Terminal Value of Replicating Portfolio')
+plt.savefig('../output/payoff_diagram.png')
 #plt.scatter(S[:,:-1].reshape(-1),delta.reshape(-1));plt.show()
