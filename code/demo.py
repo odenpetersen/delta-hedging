@@ -41,14 +41,17 @@ plt.plot(times,S.T);
 plt.xlabel('Time')
 plt.ylabel('Stock Price')
 plt.savefig('../output/stock_price.png')
+plt.clf()
 #Replicating portfolio value
 plt.plot(times[:-1],portfolio.T)
 plt.xlabel('Time')
 plt.ylabel('Value of Replicating Portfolio')
 plt.savefig('../output/replicating_portfolio.png')
+plt.clf()
 #Payoff diagram
 plt.scatter(S[:,-1],portfolio[:,-1])
 plt.xlabel('Terminal Stock Price')
 plt.ylabel('Terminal Value of Replicating Portfolio')
 plt.savefig('../output/payoff_diagram.png')
+plt.clf()
 #plt.scatter(S[:,:-1].reshape(-1),delta.reshape(-1));plt.show()
